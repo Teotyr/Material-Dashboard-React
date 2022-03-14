@@ -48,8 +48,8 @@ function Dashboard() {
               <ComplexStatisticsCard
                 color="dark"
                 icon="weekend"
-                title="Bookings"
-                count={281}
+                title="Book"
+                count={10}
                 percentage={{
                   color: "success",
                   amount: "+55%",
@@ -63,7 +63,7 @@ function Dashboard() {
               <ComplexStatisticsCard
                 icon="leaderboard"
                 title="Today's Users"
-                count="2,300"
+                count="10"
                 percentage={{
                   color: "success",
                   amount: "+3%",
@@ -78,7 +78,7 @@ function Dashboard() {
                 color="success"
                 icon="store"
                 title="Revenue"
-                count="34k"
+                count="121k"
                 percentage={{
                   color: "success",
                   amount: "+1%",
@@ -93,7 +93,7 @@ function Dashboard() {
                 color="primary"
                 icon="person_add"
                 title="Followers"
-                count="+91"
+                count="+10"
                 percentage={{
                   color: "success",
                   amount: "",

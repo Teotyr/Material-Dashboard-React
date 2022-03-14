@@ -41,7 +41,6 @@ export default function data() {
       .then((res) => res.json())
       .then((books) => setBooks(books));
   }, []);
-  console.log(books)
   const BookName = ({ image, name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
       <MDAvatar src={image} name={name} size="sm" variant="rounded" />
@@ -53,11 +52,10 @@ export default function data() {
 
   const Progress = ({ color, value }) => (
     <MDBox display="flex" alignItems="center">
-      <MDTypography variant="caption" color="text" fontWeight="medium">
-        {value}%
+      <MDTypography variant="caption" color="text" fontWeight="medium" ml={17}>
+        {value} Page
       </MDTypography>
       <MDBox ml={0.5} width="9rem">
-        <MDProgress variant="gradient" color={color} value={value} />
       </MDBox>
     </MDBox>
   );
@@ -67,7 +65,7 @@ export default function data() {
       { Header: "Book Name", accessor: "bookName", width: "30%", align: "left" },
       { Header: "year", accessor: "budget", align: "left" },
       { Header: "author", accessor: "status", align: "center" },
-      { Header: "completion", accessor: "completion", align: "center" },
+      { Header: "Number of pages", accessor: "completion", align: "center" },
       { Header: "action", accessor: "action", align: "center" },
     ],
 
@@ -84,7 +82,7 @@ export default function data() {
             {book.author}
           </MDTypography>
         ),
-        completion: <Progress color="info" value={60} />,
+        completion: <Progress color="info" value={book.pages} />,
         action: (
           <MDTypography component="a" href="#" color="text">
             <Icon>more_vert</Icon>

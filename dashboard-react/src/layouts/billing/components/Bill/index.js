@@ -68,7 +68,7 @@ function Bill({ name, company, email, vat, noGutter }) {
         </MDBox>
         <MDBox mb={1} lineHeight={0}>
           <MDTypography variant="caption" color="text">
-            Company Name:&nbsp;&nbsp;&nbsp;
+            Phone:&nbsp;&nbsp;&nbsp;
             <MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
               {company}
             </MDTypography>
